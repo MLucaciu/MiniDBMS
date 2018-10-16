@@ -9,4 +9,8 @@
 class SQLValidator
 {
 
+    public function validate($data)
+    {
+        return;
+    }
 }

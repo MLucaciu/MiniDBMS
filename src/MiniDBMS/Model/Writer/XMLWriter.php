@@ -3,13 +3,13 @@
  * Created by PhpStorm.
  * User: Mircea
  * Date: 10/16/2018
- * Time: 7:33 PM
+ * Time: 8:02 PM
  */
 
-namespace MiniDBMS\Model\Domain;
+namespace MiniDBMS\Model\Writer;
 
 
-class Index
+class XMLWriter
 {
 
 }

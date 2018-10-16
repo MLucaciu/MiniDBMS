@@ -1,6 +1,6 @@
 {
-  "name": "sql/cinema",
-  "description": "sql",
+  "name": "MiniDBMS",
+  "description": "Project for University",
 
   "require": {
     "symfony/console": "^3.2"

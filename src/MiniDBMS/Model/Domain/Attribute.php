@@ -11,9 +11,13 @@ namespace MiniDBMS\Model\Domain;
 
 class Attribute
 {
+    /** @var string  */
     private $attributeName;
+    /** @var string  */
     private $type;
+    /** @var string  */
     private $length;
+    /** @var string  */
     private $isNull;
 
     /**
@@ -23,7 +27,7 @@ class Attribute
      * @param $length
      * @param $isNull
      */
-    public function __construct($attributeName, $type, $length, $isNull)
+    public function __construct(string $attributeName,string $type,string $length,string $isNull)
     {
         $this->attributeName = $attributeName;
         $this->type = $type;
