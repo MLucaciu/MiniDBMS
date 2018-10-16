@@ -6,7 +6,6 @@
 
 namespace MiniDBMS\Utils;
 
-
 class JsonCoder implements Coder
 {
     public function encode($string)
@@ -18,5 +17,4 @@ class JsonCoder implements Coder
     {
         return json_decode($string,true);
     }
-
 }
