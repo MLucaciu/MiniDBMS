@@ -1,0 +1,13 @@
+{
+  "name": "sql/cinema",
+  "description": "sql",
+
+  "require": {
+    "symfony/console": "^3.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}
