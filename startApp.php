@@ -37,8 +37,7 @@ try {
     $method = $router->getMethod();
 
     //path to the controller
-    $path = 'Cinema\\Controller\\' . $controller;
-    // $repo='Cinema\\Model\\Repository' .
+    $path = 'MiniDBMS\\Controller\\' . $controller;
 
     //instantiating the controller
     $service = new $path();
