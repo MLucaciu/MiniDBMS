@@ -14,17 +14,17 @@ class Database
     /** @var string  */
     private $name;
     /** @var array */
-    private $tableCollection;
+    private $structure;
 
     /**
      * Database constructor.
      * @param string $name
-     * @param array $tableCollection
+     * @param array $structure
      */
-    public function __construct(string $name, array $tableCollection)
+    public function __construct(string $name, array $structure)
     {
         $this->name = $name;
-        $this->tableCollection = $tableCollection;
+        $this->structure = $structure;
     }
 
     /**
@@ -32,7 +32,7 @@ class Database
      */
     public function addTable($table)
     {
-        array_push($this->tableCollection,$table);
+        array_push($this->structure,$table);
     }
 
     /**
@@ -54,18 +54,11 @@ class Database
     /**
      * @return array
      */
-    public function getTableCollection(): array
+    public function getStructure(): array
     {
-        return $this->tableCollection;
+        return $this->structure;
     }
 
-    /**
-     * @param array $tableCollection
-     */
-    public function setTableCollection(array $tableCollection): void
-    {
-        $this->tableCollection = $tableCollection;
-    }
 
 
 }

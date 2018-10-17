@@ -9,14 +9,14 @@
 namespace MiniDBMS\Controller;
 
 
-use MiniDBMS\Model\Writer\XMLWriter;
+use MiniDBMS\Model\Writer\JSONWriter;
 
 class DatabaseController
 {
     /** @var \SQLValidator  */
     private $validator;
     /**
-     * @var XMLWriter
+     * @var JSONWriter
      */
     private $writer;
 
@@ -26,12 +26,14 @@ class DatabaseController
     public function __construct()
     {
         $this->validator = new \SQLValidator();
-        $this->writer = new XMLWriter();
+        $this->writer = new JSONWriter('schema.json');
     }
 
     public function createDatabase($data)
     {
         $this->validator->validate($data);
+        $contents = $this->writer->getContents();
+        $this->writer->writeDataBase($data);
     }
 
     public function dropDatabase($data)
